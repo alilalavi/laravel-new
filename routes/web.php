@@ -20,4 +20,6 @@ Route::get('/', function () {
 Route::get('home' , 'HomeController@index');
 Route::get('hom' , 'HomeController@home');
 Route::get('post' , 'postController@index');
+Route::get('pro' , 'HomeController@store');
+
 

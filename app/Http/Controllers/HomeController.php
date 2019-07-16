@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
+use App\Models\Shop;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -57,6 +59,13 @@ class HomeController extends Controller
     {
         $user = User::find(1);
         return $user->roles;
+    }
+
+    public function store()
+    {
+        $pro = Product::find(1);
+//        $pro->shops()->attach(3);
+        return $pro->shops;
     }
 }
 
