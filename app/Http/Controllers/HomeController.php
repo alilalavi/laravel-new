@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 
 class HomeController extends Controller
 {
-    public function addPost()
+    /*public function addPost()
     {
         // assume it won't work
         $success = false;
@@ -41,7 +41,7 @@ class HomeController extends Controller
             DB::rollback();
             return Redirect::back()->withErrorMessage('Something went wrong');
         }
-    }
+    }*/
 
 
     public function index()
