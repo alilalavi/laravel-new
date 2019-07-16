@@ -28,4 +28,3 @@ Route::get('ali2' , function (){
 Route::get('home' , 'HomeController@index');
 Route::get('a' , 'HomeController@home');
 Route::get('al' , 'HomeController@create');
-Route::get('b' , 'HomeController@create');
