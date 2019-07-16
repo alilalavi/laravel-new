@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Role;
-use App\User;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
@@ -44,32 +43,20 @@ class HomeController extends Controller
     }*/
 
 
+    /**
+     *
+     */
     public function index()
     {
-        $user = User::find(1);
-        $user->roles()->attach(3);
-//        return $this->$user->roles;
-        dd($user->roles) ;
+        $user = User::find(3);
+        $user->roles()->attach(2);
+        return $user->roles;
     }
+
     public function home()
     {
-        $user = User::find(11);
-
-        foreach ($user -> roles as $role)
-            echo $role->name;
-
-    }
-    public function create()
-    {
-        $user = User::find(6);
-        $user->roles()->sync([4]);
-        dd($user->roles);
-    }
-
-    public function store()
-    {
-        $role = Role::find(5);
-        dd($role->users);
+        $user = User::find(1);
+        return $user->roles;
     }
 }
 
