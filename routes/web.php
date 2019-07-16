@@ -17,9 +17,10 @@ Route::get('/', function () {
 });
 
 
-Route::get('home' , 'HomeController@index');
+Route::get('home' , 'HomeController@addPost');
 Route::get('hom' , 'HomeController@home');
 Route::get('post' , 'postController@index');
+Route::get('get' , 'postController@create');
 Route::get('pro' , 'HomeController@store');
 
 

@@ -1,17 +1,23 @@
-<?php
+<?php /** @noinspection ALL */
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Models\Product;
 use App\Models\Shop;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 
 class HomeController extends Controller
 {
-    /*public function addPost()
+    /**
+     * @return string
+     * @throws \Exception
+     */
+    public function addPost()
     {
         // assume it won't work
         $success = false;
@@ -23,11 +29,11 @@ class HomeController extends Controller
 
             // maybe some validation here...
 
-            $post->title = Input::get('post_title');
-            $post->content = Input::get('post_content');
+            $post->title = 'alilalavi5';
+            $post->content = 'alilalavi6';
 
             if ($post->save()) {
-                $tag_ids = Input::get('tags');
+                $tag_ids = 4;
                 $post->tags()->sync($tag_ids);
                 $success = true;
             }
@@ -42,7 +48,7 @@ class HomeController extends Controller
             DB::rollback();
             return Redirect::back()->withErrorMessage('Something went wrong');
         }
-    }*/
+    }
 
 
     /**
